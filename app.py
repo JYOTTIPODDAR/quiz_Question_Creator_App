@@ -10,7 +10,7 @@ CORS(app)
 logging.basicConfig(level=logging.INFO)
 
 # ----------------- API Key -----------------
-API_KEY = os.getenv("AIzaSyA-YOqqY7OyWJfqNO6suCM3LtAjlnIADOk")
+API_KEY = os.getenv("GEMINI_API_KEY")
 if not API_KEY:
     app.logger.error("GEMINI_API_KEY not set")
     raise ValueError("GEMINI_API_KEY environment variable not set")
