@@ -30,7 +30,7 @@ document.getElementById("generateBtn").addEventListener("click", async () => {
   status.innerText = "Generating questions...";
 
   try {
-    const res = await fetch("http://127.0.0.1:5000/generate-questions", { method: "POST", body: formData });
+    const res = await fetch("https://quiz-question-creator-app-1.onrender.com/", { method: "POST", body: formData });
     const data = await res.json();
 
     if (data.error) {
