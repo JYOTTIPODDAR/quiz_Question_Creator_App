@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Question Creator</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <h2>Quiz Creator</h2>
+      <nav>
+        <ul>
+          <li class="active" onclick="showSection('uploadSection')">Upload PDF</li>
+          <li onclick="showSection('mcqSection')">MCQs</li>
+          <li onclick="showSection('tfSection')">True/False</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section id="uploadSection" class="section active">
+        <div class="card">
+          <h2>Upload PDF</h2>
+          <input type="file" id="pdfInput" accept=".pdf"/>
+          <button id="generateBtn">Generate Questions</button>
+          <p id="status">Select a PDF to start.</p>
+        </div>
+      </section>
+
+      <section id="mcqSection" class="section">
+        <div class="card collapsible-card">
+          <div class="card-header" onclick="toggleCard('mcqList')">
+            <h3>Multiple Choice Questions ⬇</h3>
+          </div>
+          <ul id="mcqList" class="card-content"></ul>
+        </div>
+      </section>
+
+      <section id="tfSection" class="section">
+        <div class="card collapsible-card">
+          <div class="card-header" onclick="toggleCard('tfList')">
+            <h3>True/False Questions ⬇</h3>
+          </div>
+          <ul id="tfList" class="card-content"></ul>
+        </div>
+      </section>
+
+      <button id="exportBtn">Export Questions (CSV)</button>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
