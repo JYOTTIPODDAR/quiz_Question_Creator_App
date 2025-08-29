@@ -9,7 +9,7 @@ CORS(app)
 logging.basicConfig(level=logging.INFO)
 
 # ---------- API KEY ----------
-API_KEY = os.getenv("GEMINI_API_KEY") or "REPLACE_WITH_YOUR_KEY"
+API_KEY = os.getenv("GEMINI_API_KEY") or "AIzaSyA-YOqqY7OyWJfqNO6suCM3LtAjlnIADOk"
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel("gemini-1.5-flash")
 
